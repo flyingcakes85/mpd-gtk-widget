@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.1 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkImage" id="img_next">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixel-size">20</property>
+    <property name="icon-name">media-skip-forward</property>
+  </object>
+  <object class="GtkImage" id="img_pause">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixel-size">20</property>
+    <property name="icon-name">media-playback-pause</property>
+  </object>
+  <object class="GtkImage" id="img_play">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixel-size">20</property>
+    <property name="icon-name">media-playback-start</property>
+  </object>
+  <object class="GtkImage" id="img_prev">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="pixel-size">20</property>
+    <property name="icon-name">media-skip-backward</property>
+  </object>
+  <object class="GtkWindow" id="window_main">
+    <property name="width-request">280</property>
+    <property name="height-request">420</property>
+    <property name="can-focus">False</property>
+    <property name="default-width">280</property>
+    <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="margin-start">20</property>
+        <property name="margin-end">20</property>
+        <property name="margin-top">20</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkImage" id="img_album_art">
+            <property name="width-request">240</property>
+            <property name="height-request">240</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-end">10</property>
+            <property name="pixbuf">assets/default_cover.jpg</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_track_title">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-top">20</property>
+            <property name="label" translatable="yes">Track Title</property>
+            <style>
+              <class name="strong"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_artist_name">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-top">10</property>
+            <property name="label" translatable="yes">Artist Name</property>
+            <style>
+              <class name="&lt;i&gt;"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="height-request">39</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-top">15</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="margin-end">2</property>
+                <property name="image">img_prev</property>
+                <property name="always-show-image">True</property>
+                <signal name="clicked" handler="on_prev_click" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_play_pause">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="margin-start">2</property>
+                <property name="margin-end">2</property>
+                <property name="image">img_play</property>
+                <signal name="clicked" handler="on_play_pause_click" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="margin-start">2</property>
+                <property name="margin-end">2</property>
+                <property name="image">img_next</property>
+                <signal name="clicked" handler="on_next_click" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
